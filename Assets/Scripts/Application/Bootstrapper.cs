@@ -11,11 +11,8 @@ namespace Model
         {
             ServiceLocator.Register<IExpressionValidator>(new AdditionExpressionValidator());
             ServiceLocator.Register<ICalculatorInteractor>(new AdditionCalculatorInteractor());
-
             ServiceLocator.Register<IAdditionModelKeeper>(new AdditionModelKeeper());
-            
             ServiceLocator.Register<IMainPopupService>(new MainPopupService());
-
             ServiceLocator.Register<IRepository>(new PlayerRepository());
         }
     }

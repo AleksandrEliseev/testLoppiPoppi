@@ -19,7 +19,6 @@ namespace ExpressionResultView.View
             ResultItemScrollView resultItem = Instantiate(_resultItemPrefab, _content);
             resultItem.SetResultText(result);
             _resultItems.Add(resultItem);
-            
         }
         
         public void UpdateScrollSize()
@@ -30,9 +29,6 @@ namespace ExpressionResultView.View
             _generalContent.sizeDelta = new Vector2(_generalContent.sizeDelta.x,
                 Mathf.Min(currentHeight, _maxContentHeight));
             LayoutRebuilder.ForceRebuildLayoutImmediate(_generalContent);
-            
-            Debug.Log("Updated Height _content: " + _content.sizeDelta.y);
-            Debug.Log("Updated Height _generalContent: " + _generalContent.sizeDelta.y);
         }
     }
 }

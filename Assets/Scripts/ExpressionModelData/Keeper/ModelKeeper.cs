@@ -27,7 +27,7 @@ namespace ExpressionModelData.Keeper
         }
         public void TryToLoadModels(string json)
         {
-            if (_cachedModels != null) return;
+            if (_cachedModels.Count > 0) return;
             _cachedModels = string.IsNullOrEmpty(json) ? new List<T>() : _parser.FromJsonString(json);
         }
         public void AddModel(T model)

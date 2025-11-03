@@ -4,12 +4,9 @@ namespace MathLogic
 {
     public class AdditionExpressionValidator : IExpressionValidator
     {
-        public  bool IsValid(string expression)
+        public bool IsValid(string expression)
         {
-            if (string.IsNullOrEmpty(expression) || expression.Contains(" "))
-                return false;
-            
-            return Regex.IsMatch(expression, @"^\d+\+\d+$");
+            return Regex.IsMatch(expression, @"^\d{1,}\+\d{1,}$");
         }
     }
 }

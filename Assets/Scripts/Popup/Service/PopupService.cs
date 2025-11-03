@@ -12,10 +12,12 @@ namespace Popup.Service
         {
             _popupKeeper = popupKeeper;
         }
+        
         public void Register<T>(T popup) where T : IPopupView
         {
             _popupKeeper.Add(popup);
         }
+        
         public void Show<T>(Action<T> preShowAction = null) where T : IPopupView
         {
             if (_popupKeeper.TryGet(out T popup))
